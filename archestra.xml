@@ -1,0 +1,162 @@
+<!--
+ArchestrA Notepad++ Auto-Complete Plugin
+Copyright 2014 Ryan Hildebrandt www.RyanHildebrandt.com | ryan@RyanHildebrandt.com
+Installation:
+	1. Ensure Notepad++ is closed
+	2. Copy this file into the /plugins/APIs folder of your Notepad++ install directory (eg: C:/Program Files(x86)/Notepad++/plugins/APIs/)
+	3. Reopen Notepad++
+	4. In Settings/Preferences/Auto-Completion, select "Enable Auto-Completion on each input" and either "Function completion" or "Function and word completion". 
+		Also select "Function parameters hint on input". If desired, you can also auto-complete quotes and brackets
+	5. Select "ArchestrA" for the file language, and begin typing. Functions should be autocompleted, with hints as to the inputs of the function as well. 
+	-->
+<?xml version="1.0" encoding="Windows-1252" ?>
+<NotepadPlus>
+	<AutoComplete>
+		<Environment terminal=";" paramSeparator="," stopFunc=")" startFunc="(" ignoreCase="yes"/>
+		<KeyWord name="if"/>
+		<KeyWord name="then"/>
+		<KeyWord name="else"/>
+		<KeyWord name="elseif"/>
+		<KeyWord name="endif;"/>
+		<KeyWord name="for"/>
+		<KeyWord name="next;"/>
+		<KeyWord name="each"/>
+		<KeyWord name="step"/>
+		<KeyWord name="while"/>
+		<KeyWord name="endwhile;"/>
+		<KeyWord name="boolean;"/>
+		<KeyWord name="discrete;"/>
+		<KeyWord name="integer;"/>
+		<KeyWord name="elapsedtime;"/>
+		<KeyWord name="float;"/>
+		<KeyWord name="real;"/>
+		<KeyWord name="double;"/>
+		<KeyWord name="string;"/>
+		<KeyWord name="message;"/>
+		<KeyWord name="time;"/>
+		<KeyWord name="object;"/>
+		<KeyWord name="indirect;"/>
+		<KeyWord name="true"/>
+		<KeyWord name="false"/>
+		<KeyWord name="null"/>
+		<KeyWord name="me.tagname"/>
+		<KeyWord name="mycontainer.tagname"/>
+		<KeyWord name="myarea.tagname"/>
+		<KeyWord name="myengine.tagname"/>
+		<KeyWord name="myplatform.tagname"/>
+		<KeyWord func="yes" name="Abs">
+			<Overload descr="Returns the absolute value (unsigned equivalent) of a specified number." retVal="NUMBER">
+				<Param name="NUMBER n"/>
+			</Overload>
+		</KeyWord>
+<KeyWord func="yes" name="ActivateApp"><Overload descr="Restores, minimizes, maximizes, or closes 
+another currently running Windows application." retVal="STRING"><Param name="STRING TaskName"/></Overload></KeyWord>
+<KeyWord func="yes" name="ArcCos"><Overload descr="Returns an angle between 0 and 180 degrees 
+whose cosine is equal to the number specified." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="ArcSin"><Overload descr="Returns an angle between -90 and 90 degrees 
+whose sine is equal to the number specified." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="ArcTan"><Overload descr="Returns an angle between -90 and 90 degrees 
+whose tangent is equal to the number specified." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="Cos"><Overload descr="Returns the cosine of an angle in degrees." retVal="NUMBER"><Param name="NUMBER angleDegrees"/></Overload></KeyWord>
+<KeyWord func="yes" name="CreateObject"><Overload descr="Creates an ActiveX (COM) object." retVal="OBJECT"><Param name="STRING progID"/></Overload></KeyWord>
+<KeyWord func="yes" name="DateTimeGMT"><Overload descr="Returns a number representing the 
+number of days and fractions of days since January 1, 1970, in Coordinated Universal Time (UTC), 
+regardless of the local time zone." retVal="NUMBER"></Overload></KeyWord>
+<KeyWord func="yes" name="DText"><Overload descr="Returns one of two possible strings, 
+depending on the value of the Discrete parameter." retVal="STRING"><Param name="DISCRETE d"/><Param name="STRING onMessage"/><Param name="STRING offMessage"/></Overload></KeyWord>
+<KeyWord func="yes" name="Exp"><Overload descr="Returns the result of the exponent e raised to a power." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="Int"><Overload descr="Returns the next integer less than or
+ equal to a specified number." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="IsBad"><Overload descr="Returns a Boolean value indicating if the quality 
+of the specified attribute is Bad." retVal="BOOLEAN"><Param name="ATTRIBUTE attribute1, attribute2…attributeN"/></Overload></KeyWord>
+<KeyWord func="yes" name="IsGood"><Overload descr="Returns a Boolean value indicating if the quality of the specified attribute is Good." retVal="BOOLEAN"><Param name="ATTRIBUTE attribute1, attribute2…attributeN"/></Overload></KeyWord>
+<KeyWord func="yes" name="IsInitializing"><Overload descr="Returns a Boolean value indicating if the 
+quality of the specified attribute is Initializing." retVal="BOOLEAN"><Param name="ATTRIBUTE attribute1, attribute2…attributeN"/></Overload></KeyWord>
+<KeyWord func="yes" name="IsUncertain"><Overload descr="Returns a Boolean value indicating 
+if the quality of the specified attribute is Uncertain." retVal="BOOLEAN"><Param name="ATTRIBUTE attribute1, attribute2…attributeN"/></Overload></KeyWord>
+<KeyWord func="yes" name="IsUsable"><Overload descr="Returns a Boolean value indicating if the specified attribute 
+is usable for calculations." retVal="BOOLEAN"><Param name="ATTRIBUTE attribute1, attribute2…attributeN"/></Overload></KeyWord>
+<KeyWord func="yes" name="Log"><Overload descr="Returns the natural log (base e) of a number." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="LogN"><Overload descr="Returns the values of the logarithm of x to base n." retVal="NUMBER"><Param name="NUMBER n"/><Param name="NUMBER base"/></Overload></KeyWord>
+<KeyWord func="yes" name="Log10"><Overload descr="Returns the base 10 log of a number." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="LogDataChangeEvent"><Overload descr="Logs an application change event to the Galaxy Historian." retVal="NONE"><Param name="ATTRIBUTE attributeName"/><Param name="STRING Description"/><Param name="VALUE OldValue"/><Param name="VALUE NewValue"/><Param name="DATETIME TimeStamp"/></Overload></KeyWord>
+<KeyWord func="yes" name="LogMessage"><Overload descr="Writes a user-defined message to the Log Viewer." retVal="NONE"><Param name="STRING Message"/></Overload></KeyWord>
+<KeyWord func="yes" name="Now"><Overload descr="Returns the current time." retVal="DATETIME"></Overload></KeyWord>
+<KeyWord func="yes" name="Pi"><Overload descr="Returns the value of Pi." retVal="NUMBER"></Overload></KeyWord>
+<KeyWord func="yes" name="Round"><Overload descr="Rounds a real number to a specified precision and returns the result." retVal="NUMBER"><Param name="NUMBER n"/><Param name="NUMBER Precision"/></Overload></KeyWord>
+<KeyWord func="yes" name="SendKeys"><Overload descr="Sends keystrokes to an application. To the receiving application, 
+the keys appear to be entered from the keyboard. 
+You can use SendKeys() within a script to enter data or send commands to an application. 
+Most keyboard keys can be used in a SendKeys() statement. 
+Each key is represented by one or more characters, 
+such as A for the letter A or {ENTER} for the Enter key." retVal="NONE"><Param name="STRING KeySequence"/></Overload></KeyWord>
+<KeyWord func="yes" name="SetAttributeVT"><Overload descr="Sets the value and timestamp of an object attribute." retVal="NONE"><Param name="ATTRIBUTE attributeName"/><Param name="VALUE NewValue"/><Param name="DATETIME Timestamp"/></Overload></KeyWord>
+<KeyWord func="yes" name="SetBad"><Overload descr="Sets the quality of an attribute to Bad." retVal="NONE"><Param name="ATTRIBUTE attributeName"/></Overload></KeyWord>
+<KeyWord func="yes" name="SetGood"><Overload descr="Sets the quality of an attribute to Good." retVal="NONE"><Param name="ATTRIBUTE attributeName"/></Overload></KeyWord>
+<KeyWord func="yes" name="SetInitializing"><Overload descr="Sets the quality of an attribute to Initializing." retVal="NONE"><Param name="ATTRIBUTE attributeName"/></Overload></KeyWord>
+<KeyWord func="yes" name="SetUncertain"><Overload descr="Sets the quality of an attribute to Uncertain." retVal="NONE"><Param name="ATTRIBUTE attributeName"/></Overload></KeyWord>
+<KeyWord func="yes" name="Sgn"><Overload descr="Determines the sign of a value (whether it is positive, zero, or negative) 
+and returns the result." retVal="INTEGER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="Sin"><Overload descr="Returns the sine of an angle in degrees." retVal="NUMBER"><Param name="NUMBER angleDegrees"/></Overload></KeyWord>
+<KeyWord func="yes" name="Sqrt"><Overload descr="Returns the square root of a number." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringASCII"><Overload descr="Returns the ASCII value of the first character in a specified string." retVal="INTEGER"><Param name="STRING input"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringChar"><Overload descr="Returns the character corresponding to a specified ASCII code." retVal="CHAR"><Param name="INTEGER asciiCode"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringCompare"><Overload descr="Compares a string value with another string 
+(returns 0 if same, -1 if Text1 value is less than Text2, and 1 if Text2 > Text1)" retVal="INTEGER"><Param name="STRING text1"/><Param name="STRING text2"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringCompareNoCase"><Overload descr="Compares a string value with another string and ignores the case 
+(returns 0 if same, -1 if Text1 value is less than Text2, and 1 if Text2 > Text1)" retVal="INTEGER"><Param name="STRING text1"/><Param name="STRING text2"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringFromGMTTimeToLocal"><Overload descr="Converts a time value (in seconds since Jan-01-1970) to a particular 
+string representation. This is the same as StringFromTime()." retVal="STRING"><Param name="NUMBER seconds"/><Param name="INTEGER dateFormat"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringFromIntg"><Overload descr="Converts an integer value into its string representation
+ in another base and returns the result." retVal="STRING"><Param name="NUMBER n"/><Param name="NUMBER base"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringFromReal"><Overload descr="Converts a real value into its string representation, either as a floating-point number 
+or in exponential notation, and returns the result." retVal="STRING"><Param name="NUMBER n"/><Param name="INTEGER numDecimals"/><Param name="STRING format"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringFromTime"><Overload descr="Converts a time value (in seconds since January 1, 1970) into a particular string representation 
+and returns the result." retVal="STRING"><Param name="INTEGER seconds"/><Param name="INTEGER dateFormat"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringFromTimeLocal"><Overload descr="Converts a time value (in seconds since Jan-01-1970) into a particular string represention. 
+The value returned also represents local time." retVal="STRING"><Param name="INTEGER seconds"/><Param name="INTEGER dateFormat"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringInString"><Overload descr="Returns the position in a string of text 
+where a specified string first occurs." retVal="INTEGER"><Param name="STRING text"/><Param name="INTEGER searchFor"/><Param name="INTEGER startPos"/><Param name="INTEGER caseSensitive"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringLeft"><Overload descr="Returns a specified number of characters in a 
+string value, starting with the leftmost string character." retVal="STRING"><Param name="STRING text"/><Param name="INTEGER numChars"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringLen"><Overload descr="Returns the number of characters in a string." retVal="INTEGER"><Param name="STRING text"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringLower"><Overload descr="Converts all uppercase characters in text string 
+to lowercase and returns the result." retVal="STRING"><Param name="STRING text"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringMid"><Overload descr="Extracts a specific number of characters from 
+a starting point within a string and returns the 
+extracted character string as the result." retVal="STRING"><Param name="STRING text"/><Param name="INTEGER startChar"/><Param name="INTEGER numChars"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringReplace"><Overload descr="Replaces or changes specific parts 
+of a provided string and returns the result." retVal="STRING"><Param name="STRING text"/><Param name="STRING searchFor"/><Param name="STRING replaceWith"/><Param name="INTEGER caseSensitive"/><Param name="INTEGER numToReplace"/><Param name="INTEGER matchWholeWords"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringRight"><Overload descr="Returns the specified number of characters 
+starting at the rightmost character of text." retVal="STRING"><Param name="STRING text"/><Param name="INTEGER numChars"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringSpace"><Overload descr="Generates a string of spaces either within a 
+string attribute or within an expression and returns the result." retVal="STRING"><Param name="INTEGER numSpaces"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringTest"><Overload descr="Tests the first character of text to determine 
+whether it is of a certain type and returns the result." retVal="BOOLEAN"><Param name="STRING text"/><Param name="INTEGER testType"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringToIntg"><Overload descr="Converts the numeric value of a string to an 
+integer value and returns the result." retVal="INTEGER"><Param name="STRING text"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringToReal"><Overload descr="Converts the numeric value of a string to a 
+real (floating point) value and returns the result." retVal="REAL"><Param name="STRING text"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringTrim"><Overload descr="Removes unwanted spaces from text and returns the result." retVal="STRING"><Param name="STRING text"/></Overload></KeyWord>
+<KeyWord func="yes" name="StringUpper"><Overload descr="Converts all lowercase text characters to 
+uppercase and returns the result." retVal="STRING"><Param name="STRING text"/></Overload></KeyWord>
+<KeyWord func="yes" name="Tan"><Overload descr="Returns the tangent of an angle given in degrees." retVal="NUMBER"><Param name="NUMBER angleDegrees"/></Overload></KeyWord>
+<KeyWord func="yes" name="Text"><Overload descr="Converts a number to text based on a specified format." retVal="STRING"><Param name="NUMBER n"/><Param name="STRING format"/></Overload></KeyWord>
+<KeyWord func="yes" name="Trunc"><Overload descr="Truncates a real (floating point) number by simply 
+eliminating the portion to the right of the decimal point, 
+including the decimal point, and returns the result." retVal="NUMBER"><Param name="NUMBER n"/></Overload></KeyWord>
+<KeyWord func="yes" name="WriteStatus"><Overload descr="Returns the enumerated write status of the last
+write to the specified attribute." retVal="RETURN_STATUS"><Param name="ATTRIBUTE attributeName"/></Overload></KeyWord>
+<KeyWord func="yes" name="WWControl"><Overload descr="Restores, minimizes, maximizes, or closes an application." retVal="NONE"><Param name="STRING appTitle"/><Param name="STRING controlType"/></Overload></KeyWord>
+<KeyWord func="yes" name="WWExecute"><Overload descr="Using the DDE protocol, executes a command to a specified 
+application and topic and returns the status." retVal="INTEGER"><Param name="STRING appTitle"/><Param name="STRING topic"/><Param name="STRING command"/></Overload></KeyWord>
+<KeyWord func="yes" name="WWPoke"><Overload descr="Using the DDE protocol, pokes a value to a specified 
+application, topic, and item and returns the status." retVal="INTEGER"><Param name="STRING appTitle"/><Param name="STRING topic"/><Param name="STRING Item"/><Param name="STRING textValue"/></Overload></KeyWord>
+<KeyWord func="yes" name="WWRequest"><Overload descr="Using the DDE protocol, makes a one-time request 
+for a value from a particular application, 
+topic, and item and returns the status." retVal="INTEGER"><Param name="STRING appTitle"/><Param name="STRING topic"/><Param name="STRING Item"/><Param name="STRING attribute"/></Overload></KeyWord>
+<KeyWord func="yes" name="WWStringFromTime"><Overload descr="Converts a time value given in local time 
+into UTC time (Coordinated Universal Time), 
+and displays the result as a string." retVal="STRING"><Param name="NUMBER seconds"/><Param name="INTEGER dateFormat"/></Overload></KeyWord>
+	</AutoComplete>
+</NotepadPlus>
